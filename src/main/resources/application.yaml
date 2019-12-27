@@ -1,0 +1,34 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+
+    # MySQL 配置
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/chidori_test?characterEncoding=utf8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: password
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    open-in-view: true
+server:
+  port: 9060
+
+vendor:
+  cors_access:
+    allow_origins: http://*,https://*
+  wx:
+    pay:
+      key: pay_key_test
+      mch_id: mch_id_test
+      url: https://app.*.com/
+    mp:
+      app_id: app_id_test
+      app_secret: app_secret_test
+    config:
+      callback: https://**.com/callback/

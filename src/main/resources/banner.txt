@@ -1,0 +1,14 @@
+ ${AnsiColor.BRIGHT_YELLOW}
+ _______ _________ _______  _______
+(  ____ )\__   __/(  ____ \(  ___  )
+| (    )|   ) (   | (    \/| (   ) |
+| (____)|   | |   | |      | (___) |
+|  _____)   | |   | |      |  ___  |
+| (         | |   | |      | (   ) |
+| )      ___) (___| (____/\| )   ( |
+|/       \_______/(_______/|/     \|
+
+ ::: Spring-Boot ${spring-boot.version}     ::: Pica (version:${application.formatted-version})
+
+ ::: blog https://www.oopmind.com :::
+ ${AnsiColor.BRIGHT_BLACK}

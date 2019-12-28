@@ -91,6 +91,9 @@ public class TransactionServiceImpl implements TransactionService {
             updateOrder.setPrePayId(prepay_id);
             updateOrder.setId(transOrder.getId());
             updateOrder.setGid(transOrder.getGid());
+            updateOrder.setUserGid(transOrder.getUserGid());
+            updateOrder.setOrderAmount(transOrder.getOrderAmount());
+            updateOrder.setOrderStatus(transOrder.getOrderStatus());
             transOrderRepository.saveAndFlush(updateOrder);
 
             String packages = "prepay_id=" + prepay_id;

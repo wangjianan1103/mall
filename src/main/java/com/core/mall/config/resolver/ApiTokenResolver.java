@@ -55,7 +55,7 @@ public class ApiTokenResolver {
         response.addHeader(HTTP.CONTENT_TYPE, "application/json;charset=utf-8");
         try {
             // u
-            final String u = request.getHeader("Authorization");
+            final String u = request.getHeader("uid");
             if (Utility.isBlank(u)) {
                 logger.error("checkApiUtcToken: uid invalid, u={}", u);
                 setTokenInvalidResp(response);
@@ -63,7 +63,7 @@ public class ApiTokenResolver {
             }
             final int userId = Integer.parseInt(u);
             // t
-            final String t = request.getHeader("uid");
+            final String t = request.getHeader("Authorization");
             if (Utility.isBlank(t)) {
                 logger.error("checkApiUtcToken: token is blank.");
                 setTokenInvalidResp(response);

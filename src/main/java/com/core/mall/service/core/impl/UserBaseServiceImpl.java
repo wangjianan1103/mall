@@ -186,7 +186,7 @@ public class UserBaseServiceImpl implements UserBaseService {
 
         response.setUid(userBase.getId());
         response.setUserGid(userGid);
-        response.setToken(token);
+        response.setT(token);
         return response;
     }
 

@@ -1,11 +1,11 @@
 package com.core.mall.model.params;
 
+import com.core.mall.model.params.user.BaseLogin;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
+@EqualsAndHashCode(callSuper = true)
 @Data
-public class WeChatInfoResp {
-    private String userGid;
-    private long uid;
-    private String token;
+public class WeChatInfoResp extends BaseLogin {
 
 }

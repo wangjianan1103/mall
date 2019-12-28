@@ -38,7 +38,7 @@ public class CoreControllerAdvice implements ResponseBodyAdvice<Object> {
     @ResponseBody
     @ExceptionHandler(value = Exception.class)
     public ResponseInfo errorHandler(Exception ex) {
-        logger.error("exception, ex={}, url={}", ex, this.doURILog());
+        logger.error("exception, ex={}, url={}", ex.getMessage(), this.doURILog());
         ex.printStackTrace();
         return new ResponseInfo(ErrorCodeEnum.SYS_FAIL.getErrorCode(), ex.getMessage());
     }

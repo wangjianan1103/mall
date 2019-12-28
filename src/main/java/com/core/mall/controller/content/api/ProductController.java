@@ -1,5 +1,6 @@
 package com.core.mall.controller.content.api;
 
+import com.core.mall.config.ApiTokenValidator;
 import com.core.mall.model.params.ConfigProductResp;
 import com.core.mall.model.params.ProductListResp;
 import com.core.mall.service.core.ProductService;
@@ -15,11 +16,13 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
+    @ApiTokenValidator
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     public ProductListResp productList() {
         return productService.productList();
     }
 
+    @ApiTokenValidator
     @RequestMapping(value = "/type/list", method = RequestMethod.GET)
     public ConfigProductResp productTypeList() {
         return productService.productTypeList();

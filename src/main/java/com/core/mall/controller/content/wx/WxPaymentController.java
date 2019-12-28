@@ -1,5 +1,6 @@
 package com.core.mall.controller.content.wx;
 
+import com.core.mall.config.ApiTokenValidator;
 import com.core.mall.model.params.WxSdkConfigParam;
 import com.core.mall.model.params.WxSdkConfigResp;
 import com.core.mall.service.wx.WxPayService;
@@ -32,6 +33,7 @@ public class WxPaymentController {
     /**
      * 微信支付配置
      */
+    @ApiTokenValidator
     @RequestMapping(value = "getSdkConfig", method = RequestMethod.POST)
     public WxSdkConfigResp getSdkConfig(@RequestBody(required = false) WxSdkConfigParam param) {
         return wxPayService.wxSdkConfig(param);
